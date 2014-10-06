@@ -8,8 +8,13 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import org.apache.log4j.Logger;
 import service.MsgServiceInterface;
+import service.ServiceException;
 import service.ServiceSingleton;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.LineNumberReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -31,7 +36,7 @@ public class Controller implements Initializable {
     private void onKlickSendBtn() {
 
         //Login Procedure - LAB 0
-        /*FileReader fileReader = null;
+        FileReader fileReader = null;
         try {
             fileReader = new FileReader("src/main/resources/command");
             String msg = "";
@@ -55,7 +60,7 @@ public class Controller implements Initializable {
                     logger.error(e.getMessage());
                 }
             }
-        }*/
+        }
     }
 
     @Override
